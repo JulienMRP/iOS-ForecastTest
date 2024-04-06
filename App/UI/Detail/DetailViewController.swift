@@ -23,6 +23,5 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addFullScreenView(DetailView(forecastItem: viewModel.forecastItem))
-        self.title = viewModel.title
     }
 }

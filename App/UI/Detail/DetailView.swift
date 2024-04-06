@@ -19,26 +19,58 @@ struct DetailView: View {
     }
     
     @ViewBuilder
+    private func TintedImage(imageName: String, tintColor: Color) -> some View {
+        Image(imageName)
+            .tintImage(tintColor)
+    }
+    
+    @ViewBuilder
     private var content: some View {
         VStack {
-            Container {
-                Image(forecastItem.type)
-                    .tint(.white)
-            }
+            weatherView
             temperatureView
             sunView
             rainChanceView
+        }.padding(24)
+    }
+    
+    @ViewBuilder
+    private var weatherView: some View {
+        Container {
+            VStack(spacing: 16) {
+                Text("Day \(forecastItem.day)")
+                    .forecastLabelFont()
+                TintedImage(imageName: forecastItem.type,
+                            tintColor: .white)
+                Text(forecastItem.description)
+                    .forecastInfoFont()
+            }
         }
     }
     
     @ViewBuilder
     private var sunView: some View {
-        Container {
-            HStack {
-                Text(forecastItem.sunrise.time)
-                    .foregroundStyle(.white)
-                Text(forecastItem.sunset.time)
-                    .foregroundStyle(.white)
+        HStack {
+            Container {
+                VStack(spacing: 12) {
+                    Text("Sunrise")
+                        .forecastLabelFont()
+                    TintedImage(imageName: "sunrise",
+                                tintColor: .white)
+                    Text(forecastItem.sunrise.time)
+                        .forecastInfoFont()
+                }
+            }
+            
+            Container {
+                VStack(spacing: 12) {
+                    Text("Sunset")
+                        .forecastLabelFont()
+                    TintedImage(imageName: "sunset",
+                                tintColor: .white)
+                    Text(forecastItem.sunset.time)
+                        .forecastInfoFont()
+                }
             }
         }
         
@@ -46,23 +78,41 @@ struct DetailView: View {
     
     @ViewBuilder
     private var temperatureView: some View {
-        Container {
-            HStack {
-                Text(forecastItem.high.temperature)
-                    .foregroundStyle(.white)
-                Text(forecastItem.low.temperature)
-                    .foregroundStyle(.white)
+        HStack {
+            Container {
+                VStack {
+                    Text("High")
+                        .forecastLabelFont()
+                    Text(forecastItem.high.temperature)
+                        .forecastInfoFont()
+                        
+                }
             }
+            Container {
+                VStack {
+                    Text("Low")
+                        .forecastLabelFont()
+                    Text(forecastItem.low.temperature)
+                        .forecastInfoFont()
+                }
+            }
+           
         }
-       
+        
     }
     
     @ViewBuilder
     private var rainChanceView: some View {
         Container(content: {
-            HStack {
-                Text(forecastItem.chanceRain.percent)
-                    .foregroundStyle(.white)
+            VStack {
+                Text("Rain chances")
+                    .forecastLabelFont()
+                HStack {
+                    TintedImage(imageName: "rain", tintColor: .white)
+                    Text(forecastItem.chanceRain.percent)
+                        .forecastInfoFont()
+                }
+                
             }
         })
         
@@ -84,7 +134,8 @@ struct Container<Content: View>: View {
     
     var body: some View {
         content
-            .padding(12)
+            .padding(18)
+            .frame(maxWidth: .infinity)
             .background(Color(uiColor: GlobalColor.backgroundSecondary ?? .black))
             .clipShape(RoundedRectangle(cornerRadius: 12))
     }
