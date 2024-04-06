@@ -26,8 +26,8 @@ class ListCell: TableViewCell {
         NSLayoutConstraint.activate([
             label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
+            label.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
         ])
     }
 

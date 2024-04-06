@@ -13,6 +13,13 @@ class ListViewModel {
     private var bag = Set<AnyCancellable>()
 
     var datas = CurrentValueSubject<[TableViewSection], Never>([])
+    
+    private(set) var tableViewData = [TableViewData]() {
+        didSet {
+            self.datas.send([TableViewSection(identifier: "section",
+                                              datas: self.tableViewData)])
+        }
+    }
 
     var showDetail: ((ForecastItem) -> Void)?
 
@@ -31,14 +38,18 @@ class ListViewModel {
                 .set(trailingActions: [self.trailingAction(item: $0)])
                 .set(separator: .full)
                 .set(separatorColor: .lightGray)
-                .did(select: nil)
+                .did { [weak self] data in
+                    guard let self = self, let item = data as? ListCellData else { return }
+                    self.showDetail?(item.forecast)
+                }
 
         }
-        self.datas.send([TableViewSection(identifier: "section",
-                                          datas: datas)])
+        self.tableViewData = datas
     }
 
     private func trailingAction(item: ForecastItem) -> TableViewContextualAction {
-        return TableViewContextualAction(title: "Delete", style: .destructive, backgroundColor: .red, action: nil)
+        return TableViewContextualAction(title: "Delete", style: .destructive, backgroundColor: .red) { item in
+            item.remove(to: &self.tableViewData)
+        }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22CD4E062BC09B9200E634F4 /* ForecastServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E052BC09B9200E634F4 /* ForecastServiceImpl.swift */; };
 		4A925F28280582DD0021096B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ADACE4C28041D6800706AD5 /* Assets.xcassets */; };
 		4AA546D72804269400BCE871 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA546D42804269400BCE871 /* TableViewDelegate.swift */; };
 		4AA546D82804269400BCE871 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA546D52804269400BCE871 /* TableView.swift */; };
@@ -106,6 +107,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		22CD4E052BC09B9200E634F4 /* ForecastServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceImpl.swift; sourceTree = "<group>"; };
 		4AA546D42804269400BCE871 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		4AA546D52804269400BCE871 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		4AA546D62804269400BCE871 /* TableView+DragDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+DragDrop.swift"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				4AA5470B28045EA700BCE871 /* ForecastService.swift */,
+				22CD4E052BC09B9200E634F4 /* ForecastServiceImpl.swift */,
 				4AA5470D28045F6A00BCE871 /* Models */,
 				4AA5470728045BC200BCE871 /* Network */,
 			);
@@ -536,6 +539,7 @@
 				4ADACE4328041D6800706AD5 /* SceneDelegate.swift in Sources */,
 				4AA5470C28045EA700BCE871 /* ForecastService.swift in Sources */,
 				4AA5470428045ADA00BCE871 /* ForecastNetworkService.swift in Sources */,
+				22CD4E062BC09B9200E634F4 /* ForecastServiceImpl.swift in Sources */,
 				4AA5471B2804679C00BCE871 /* ListCell.swift in Sources */,
 				4AA546F7280431BC00BCE871 /* AppModule.swift in Sources */,
 				4AA547182804672000BCE871 /* ListCellData.swift in Sources */,
@@ -729,9 +733,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LWJTLD5565;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -745,6 +749,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.interview.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -757,9 +762,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LWJTLD5565;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -773,6 +778,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.interview.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
