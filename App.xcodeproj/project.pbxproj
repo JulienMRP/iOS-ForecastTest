@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		22CD4E062BC09B9200E634F4 /* ForecastServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E052BC09B9200E634F4 /* ForecastServiceImpl.swift */; };
+		22CD4E082BC1D44000E634F4 /* Int+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E072BC1D44000E634F4 /* Int+Format.swift */; };
+		22CD4E0B2BC1DD4500E634F4 /* Double+Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E0A2BC1DD4500E634F4 /* Double+Percent.swift */; };
 		4A925F28280582DD0021096B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ADACE4C28041D6800706AD5 /* Assets.xcassets */; };
 		4AA546D72804269400BCE871 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA546D42804269400BCE871 /* TableViewDelegate.swift */; };
 		4AA546D82804269400BCE871 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA546D52804269400BCE871 /* TableView.swift */; };
@@ -108,6 +110,8 @@
 
 /* Begin PBXFileReference section */
 		22CD4E052BC09B9200E634F4 /* ForecastServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceImpl.swift; sourceTree = "<group>"; };
+		22CD4E072BC1D44000E634F4 /* Int+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Format.swift"; sourceTree = "<group>"; };
+		22CD4E0A2BC1DD4500E634F4 /* Double+Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Percent.swift"; sourceTree = "<group>"; };
 		4AA546D42804269400BCE871 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		4AA546D52804269400BCE871 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		4AA546D62804269400BCE871 /* TableView+DragDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+DragDrop.swift"; sourceTree = "<group>"; };
@@ -331,6 +335,8 @@
 			children = (
 				4ADACE812804233400706AD5 /* Global.h */,
 				4AA546E8280428FB00BCE871 /* Array+Utils.swift */,
+				22CD4E072BC1D44000E634F4 /* Int+Format.swift */,
+				22CD4E0A2BC1DD4500E634F4 /* Double+Percent.swift */,
 				4AA546F12804315B00BCE871 /* ModuleManager */,
 				4ADACE9C2804237000706AD5 /* InjectionDependancy */,
 			);
@@ -552,10 +558,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CD4E0B2BC1DD4500E634F4 /* Double+Percent.swift in Sources */,
 				4ADACE9E2804237D00706AD5 /* GlobalContainer.swift in Sources */,
 				4ADACEA02804238D00706AD5 /* Inject.swift in Sources */,
 				4AA546E9280428FB00BCE871 /* Array+Utils.swift in Sources */,
 				4AA546F52804317000BCE871 /* Module.swift in Sources */,
+				22CD4E082BC1D44000E634F4 /* Int+Format.swift in Sources */,
 				4AA546F32804316900BCE871 /* ModuleManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
