@@ -21,7 +21,7 @@ class ForecastServiceImpl: ForecastService {
         fetchForecastNetworkItems()
     }
     
-    private func fetchForecastNetworkItems() {
+    func fetchForecastNetworkItems() {
         forecastNetworkService.getForecast()
             .map() { dtoItems -> ForecastItems in
                 dtoItems.map { ForecastItem(dto: $0) }

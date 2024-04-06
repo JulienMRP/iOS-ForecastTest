@@ -23,15 +23,36 @@ class ListViewModel {
 
     var showDetail: ((ForecastItem) -> Void)?
 
-    var title: String = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as! String
+    var title: String {
+        let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as! String
+        if AppEnvironment.shared.environment == .network {
+            return appName
+        } else {
+            return "\(appName) (mock)"
+        }
+    }
+    
 
     init() {
+        setBindings()
+    }
+
+    func switchEnvironment() {
+        bag.removeAll()
+        AppEnvironment.shared.switchEnvironment()
+        GlobalContainer.reset()
+        AppModule.shared.registerServices()
+        service = GlobalContainer.defaultContainer.resolve(ForecastService.self)!
+        setBindings()
+    }
+    
+    private func setBindings() {
         service.items
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in self?.createSection($0) }
             .store(in: &bag)
     }
-
+    
     private func createSection(_ items: ForecastItems) {
         let datas: [TableViewData] = items.map {
             ListCellData(forecast: $0)

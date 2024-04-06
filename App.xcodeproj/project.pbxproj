@@ -12,6 +12,9 @@
 		22CD4E0B2BC1DD4500E634F4 /* Double+Percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E0A2BC1DD4500E634F4 /* Double+Percent.swift */; };
 		22CD4E0D2BC1E4F200E634F4 /* Image+TintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E0C2BC1E4F200E634F4 /* Image+TintColor.swift */; };
 		22CD4E102BC1EE4D00E634F4 /* Text+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E0F2BC1EE4D00E634F4 /* Text+Format.swift */; };
+		22CD4E122BC1F5C800E634F4 /* mockData.json in Resources */ = {isa = PBXBuildFile; fileRef = 22CD4E112BC1F5C800E634F4 /* mockData.json */; };
+		22CD4E142BC1F65400E634F4 /* ForecastNetworkServiceImplMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E132BC1F65400E634F4 /* ForecastNetworkServiceImplMock.swift */; };
+		22CD4E162BC1F88200E634F4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CD4E152BC1F88200E634F4 /* Environment.swift */; };
 		4A925F28280582DD0021096B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ADACE4C28041D6800706AD5 /* Assets.xcassets */; };
 		4AA546D72804269400BCE871 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA546D42804269400BCE871 /* TableViewDelegate.swift */; };
 		4AA546D82804269400BCE871 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA546D52804269400BCE871 /* TableView.swift */; };
@@ -116,6 +119,9 @@
 		22CD4E0A2BC1DD4500E634F4 /* Double+Percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Percent.swift"; sourceTree = "<group>"; };
 		22CD4E0C2BC1E4F200E634F4 /* Image+TintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+TintColor.swift"; sourceTree = "<group>"; };
 		22CD4E0F2BC1EE4D00E634F4 /* Text+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Format.swift"; sourceTree = "<group>"; };
+		22CD4E112BC1F5C800E634F4 /* mockData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockData.json; sourceTree = "<group>"; };
+		22CD4E132BC1F65400E634F4 /* ForecastNetworkServiceImplMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastNetworkServiceImplMock.swift; sourceTree = "<group>"; };
+		22CD4E152BC1F88200E634F4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		4AA546D42804269400BCE871 /* TableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
 		4AA546D52804269400BCE871 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		4AA546D62804269400BCE871 /* TableView+DragDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+DragDrop.swift"; sourceTree = "<group>"; };
@@ -283,7 +289,9 @@
 		4AA5470728045BC200BCE871 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				22CD4E112BC1F5C800E634F4 /* mockData.json */,
 				4AA5470328045ADA00BCE871 /* ForecastNetworkService.swift */,
+				22CD4E132BC1F65400E634F4 /* ForecastNetworkServiceImplMock.swift */,
 				4AA5470528045BBB00BCE871 /* ForecastNetworkServiceImpl.swift */,
 				4AA5470928045C9F00BCE871 /* ForecastItemDTO.swift */,
 			);
@@ -331,6 +339,7 @@
 		4ADACE3F28041D6800706AD5 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				22CD4E152BC1F88200E634F4 /* Environment.swift */,
 				4ADACE4028041D6800706AD5 /* AppDelegate.swift */,
 				4ADACE4228041D6800706AD5 /* SceneDelegate.swift */,
 				4AA546F6280431BC00BCE871 /* AppModule.swift */,
@@ -520,6 +529,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CD4E122BC1F5C800E634F4 /* mockData.json in Resources */,
 				4ADACE5028041D6800706AD5 /* LaunchScreen.storyboard in Resources */,
 				4ADACE4D28041D6800706AD5 /* Assets.xcassets in Resources */,
 			);
@@ -556,6 +566,7 @@
 				4AA5470A28045C9F00BCE871 /* ForecastItemDTO.swift in Sources */,
 				4AA54700280442A300BCE871 /* DetailViewModel.swift in Sources */,
 				4AA546EC28042B6700BCE871 /* ListViewModel.swift in Sources */,
+				22CD4E162BC1F88200E634F4 /* Environment.swift in Sources */,
 				4ADACE4328041D6800706AD5 /* SceneDelegate.swift in Sources */,
 				4AA5470C28045EA700BCE871 /* ForecastService.swift in Sources */,
 				4AA5470428045ADA00BCE871 /* ForecastNetworkService.swift in Sources */,
@@ -563,6 +574,7 @@
 				4AA5471B2804679C00BCE871 /* ListCell.swift in Sources */,
 				4AA546F7280431BC00BCE871 /* AppModule.swift in Sources */,
 				4AA547182804672000BCE871 /* ListCellData.swift in Sources */,
+				22CD4E142BC1F65400E634F4 /* ForecastNetworkServiceImplMock.swift in Sources */,
 				4AA546FC2804428400BCE871 /* DetailViewController.swift in Sources */,
 				4AA5470F28045F7400BCE871 /* ForecastItem.swift in Sources */,
 			);

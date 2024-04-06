@@ -48,4 +48,10 @@ class ListViewController: UIViewController {
         ])
         navigationController?.navigationBar.prefersLargeTitles = false
     }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        super.motionBegan(motion, with: event)
+        viewModel.switchEnvironment()
+        self.title = viewModel.title
+    }
 }
