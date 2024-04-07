@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct ForecastItem {
+struct ForecastItem: Equatable {
     let day: String
     let description: String
     let sunrise, sunset: Int

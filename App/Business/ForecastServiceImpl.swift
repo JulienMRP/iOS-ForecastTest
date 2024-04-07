@@ -13,7 +13,7 @@ import Global
 class ForecastServiceImpl: ForecastService {
     
     var items: CurrentValueSubject<ForecastItems, Never> = CurrentValueSubject([])
-    @Inject var forecastNetworkService: ForecastNetworkService
+    @InjectNetwork var forecastNetworkService: ForecastNetworkService
 
     private var cancelBag = Set<AnyCancellable>()
     
@@ -40,7 +40,5 @@ class ForecastServiceImpl: ForecastService {
             }
             .store(in: &cancelBag)
     }
-   
-    
-    
+
 }

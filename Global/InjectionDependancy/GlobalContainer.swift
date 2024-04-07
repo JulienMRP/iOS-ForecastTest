@@ -12,8 +12,9 @@ import Swinject
 /// Useful to have an Inject property wrapper
 public final class GlobalContainer {
     public static var defaultContainer = Container()
+    public static var networkContainer = Container()
 
-    public static func reset() {
-        defaultContainer.removeAll()
+    public static func resetNetworkContainer() {
+        networkContainer.removeAll()
     }
 }

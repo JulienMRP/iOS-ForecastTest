@@ -14,9 +14,9 @@ public class AppModule: Module {
 
     public func registerServices() {
         if AppEnvironment.shared.environment == .network {
-            GlobalContainer.defaultContainer.register(ForecastNetworkService.self) { _ in ForecastNetworkServiceImpl() }
+            GlobalContainer.networkContainer.register(ForecastNetworkService.self) { _ in ForecastNetworkServiceImpl() }
         } else {
-            GlobalContainer.defaultContainer.register(ForecastNetworkService.self) { _ in ForecastNetworkServiceImplMock() }
+            GlobalContainer.networkContainer.register(ForecastNetworkService.self) { _ in ForecastNetworkServiceImplMock() }
         }
         GlobalContainer.defaultContainer.register(ForecastService.self) { _ in ForecastServiceImpl() }
     }

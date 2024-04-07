@@ -28,7 +28,7 @@ class ListViewModel {
         if AppEnvironment.shared.environment == .network {
             return appName
         } else {
-            return "\(appName) (mock)"
+            return "\(appName) (mock demo)"
         }
     }
     
@@ -40,7 +40,7 @@ class ListViewModel {
     func switchEnvironment() {
         bag.removeAll()
         AppEnvironment.shared.switchEnvironment()
-        GlobalContainer.reset()
+        GlobalContainer.resetNetworkContainer()
         AppModule.shared.registerServices()
         service = GlobalContainer.defaultContainer.resolve(ForecastService.self)!
         setBindings()

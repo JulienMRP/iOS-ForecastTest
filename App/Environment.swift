@@ -15,7 +15,7 @@ enum Environment {
 class AppEnvironment {
     public static var shared = AppEnvironment()
     
-    var environment: Environment = .mock
+    var environment: Environment = .network
     
     func switchEnvironment() {
         environment = environment == .network ? .mock : .network
